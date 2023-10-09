@@ -74,7 +74,7 @@ if (e.target.className == "letter-box") {
       spanLetters[index].textContent = theClickedLetter;
       document.getElementById("success").play();
       let wordGuess = document.querySelector(".letters-guess").textContent;
-      if (wordGuess == randomValue.replace(/\s/g, "")) {
+      if (wordGuess == randomValue.replace(/\s/g, "").toLowerCase()) {
       success();
       lettersContainer.classList.add("endGame");
       }
